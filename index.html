@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floyd-Warshall Algorithm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Floyd-Warshall Algorithm</h1>
+        <p>The Floyd-Warshall algorithm is a dynamic programming algorithm used for finding shortest paths in a weighted graph with positive or negative edge weights (but with no negative cycles). It works for both directed and undirected graphs.</p>
+        <h2>Algorithm Details:</h2>
+        <ul>
+            <li>Time Complexity: O(V^3)</li>
+            <li>Space Complexity: O(V^2)</li>
+        </ul>
+        <img src="warshall.png" alt="Floyd-Warshall Algorithm Image">
+        <p>In the provided graph, we have taken 5 nodes labeled as A, B, C, D, and E. These nodes are connected by 7 directed edges with weights assigned to them.</p>
+         <h2>Shortest distances between all pairs of nodes:</h2>
+        <p>Distance from Node A to Node A: 0</p>
+        <p>Distance from Node A to Node B: 2</p>
+        <p>Distance from Node A to Node C: -1</p>
+        <p>Distance from Node A to Node D: -3</p>
+        <p>Distance from Node A to Node E: -6</p>
+        <p>Distance from Node B to Node B: 0</p>
+        <p>Distance from Node B to Node C: 3</p>
+        <p>Distance from Node B to Node D: -5</p>
+        <p>Distance from Node B to Node E: -8</p>
+        <p>Distance from Node C to Node C: 0</p>
+        <p>Distance from Node C to Node D: 1</p>
+        <p>Distance from Node C to Node E: -2</p>
+        <p>Distance from Node D to Node D: 0</p>
+        <p>Distance from Node D to Node E: -3</p>
+        <p>Distance from Node E to Node E: 0</p>
+         <h2>Shortest distances between all pairs of nodes:</h2>
+        <table>
+            <tr>
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>E</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>2</td>
+                <td>-1</td>
+                <td>-3</td>
+                <td>-6</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>∞</td>
+                <td>0</td>
+                <td>3</td>
+                <td>-5</td>
+                <td>-8</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>∞</td>
+                <td>∞</td>
+                <td>0</td>
+                <td>1</td>
+                <td>-2</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>∞</td>
+                <td>∞</td>
+                <td>∞</td>
+                <td>0</td>
+                <td>-3</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>∞</td>
+                <td>∞</td>
+                <td>∞</td>
+                <td>∞</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <p>In this table:</p>
+        <ul>
+            <li>"∞" represents infinity, indicating that there is no direct path from the source node to the destination node.</li>
+            <li>The diagonal elements (A-A, B-B, C-C, D-D, E-E) are all 0, indicating that the distance from a node to itself is always 0.</li>
+        </ul>
+    </div>
+</body>
+</html>
