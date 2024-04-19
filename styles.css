@@ -12,8 +12,11 @@ body {
     padding: 0 20px;
 }
 
-h1, h2 {
+h1 {
     color: #98FB98;
+}
+h2 {
+    color: #E0218A;
 }
 
 p {
@@ -27,6 +30,7 @@ ul {
 
 li {
     margin-bottom: 10px;
+
 }
 
 table {
